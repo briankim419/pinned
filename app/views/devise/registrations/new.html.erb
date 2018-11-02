@@ -4,6 +4,31 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :first_name, 'First Name' %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name, 'Last Name' %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_name, 'User Name' %><br />
+    <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dob, 'Birthday' %><br />
+    <%= f.date_field :dob,
+    value: f.object.try(:strftime,"%d/%m/%Y"),
+    min: 150.years.ago,
+    max: 13.year.ago,
+    autocomplete: "dob"
+    %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
