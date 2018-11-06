@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'schedules#new'
+  root 'homes#index'
   devise_for :users
 
   namespace :api do
@@ -30,10 +30,8 @@ Rails.application.routes.draw do
     end
   end
 
-  namespace :api do
-    namespace :v1 do
-      post 'location/search', to: 'location#search'
-    end
+  resources :schedules, only: [:search] do
+    get 'search', on: :collection
   end
 
   resources :locations, only: [:index, :show, :new, :create]

@@ -30,9 +30,9 @@ render() {
   // style={{height: `1000px`, width: `1000px` }}
   const DirectionsComponent = compose(
     withProps({
-      loadingElement: <div style={{ height: `400px` }} />,
-    containerElement: <div className="map-container" style={{ height: `500px`, width: `inherit` }}/>,
-      mapElement: <div className="columns small-centered small-8"  style={{height: `500px`, width: `1000px` }} />,
+      loadingElement: <div style={{ height: `100%` }} />,
+    containerElement: <div style={{ height: `500px` }} />,
+    mapElement: <div className="columns small-centered small-12 medium-6 columns"  style={{ height: `100%` }} />,
     }),
     // withScriptjs,
     withGoogleMap,

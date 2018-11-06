@@ -1,6 +1,11 @@
 class Api::V1::SchedulesController < Api::V1::ApiController
   protect_from_forgery unless: -> { request.format.json? }
 
+  def search
+    @schedules = Schedule.where("title ILIKE ? OR body ILIKE ?", "%#{params['search_string']}%", "%#{params['search_string']}%")
+    render json: @schedules
+  end
+
   def new
     schedule = Schedule.new
     render json: {schedule: schedule}

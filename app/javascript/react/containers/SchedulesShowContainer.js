@@ -52,7 +52,7 @@ class SchedulesShow extends Component {
 
     if(this.state.showInfo) {
       output =
-      <div className="showHeader">
+      <div className="showHeader small-12 small-centered medium-4 columns row">
         <h1>Title: {this.state.showInfo.title}</h1>
         <h2>Description: {this.state.showInfo.body}</h2>
       </div>
