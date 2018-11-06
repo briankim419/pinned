@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 const YelpTile = props => {
 
   return(
-    <div className="yelp-tile">
+    <div className="yelp-tile small-3 end columns">
       <input type="radio" name="yelpPlacesId" value={props.id} onClick={props.handleClick}/>
       <h3>{props.name}</h3>
       <p>{props.address} | Rating: {props.rating}</p>

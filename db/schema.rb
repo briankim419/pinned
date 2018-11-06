@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2018_10_27_194418) do
   create_table "locations", force: :cascade do |t|
     t.string "name", null: false
     t.string "description"
-    t.integer "rating"
     t.string "url"
     t.string "phone_number"
     t.string "state", null: false
@@ -26,6 +25,11 @@ ActiveRecord::Schema.define(version: 2018_10_27_194418) do
     t.integer "zipcode", null: false
     t.string "address", null: false
     t.integer "price"
+    t.decimal "rating"
+    t.integer "review_count"
+    t.decimal "latitude"
+    t.decimal "longitude"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

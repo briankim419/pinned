@@ -20,19 +20,19 @@ class Api::V1::SchedulesController < Api::V1::ApiController
       if params[:savedID]["0"]
         response = yelp_parser.business(params[:savedID]["0"])
         address = response["location"]
-        loc1 = Location.create(name:response["name"], state: address["state"], city: address["city"], zipcode: address["zip_code"], address: address["address1"])
+        loc1 = Location.create(name: response["name"], state: address["state"], city: address["city"], zipcode: address["zip_code"], address: address["address1"], longitude: response["coordinates"]["longitude"], latitude:response["coordinates"]["latitude"], image: response["photos"][0])
         Timeslot.create(location_id:loc1.id,schedule_id:schedule.id)
       end
       if params[:savedID]["1"]
         response = yelp_parser.business(params[:savedID]["1"])
         address = response["location"]
-        loc1 = Location.create(name:response["name"], state: address["state"], city: address["city"], zipcode: address["zip_code"], address: address["address1"])
+        loc1 = Location.create(name:response["name"], state: address["state"], city: address["city"], zipcode: address["zip_code"], address: address["address1"], longitude: response["coordinates"]["longitude"], latitude:response["coordinates"]["latitude"], image:response["photos"][0])
         Timeslot.create(location_id:loc1.id,schedule_id:schedule.id)
       end
       if params[:savedID]["2"]
         response = yelp_parser.business(params[:savedID]["2"])
         address = response["location"]
-        loc1 = Location.create(name:response["name"], state: address["state"], city: address["city"], zipcode: address["zip_code"], address: address["address1"])
+        loc1 = Location.create(name:response["name"], state: address["state"], city: address["city"], zipcode: address["zip_code"], address: address["address1"], longitude: response["coordinates"]["longitude"], latitude:response["coordinates"]["latitude"], image:response["photos"][0])
         Timeslot.create(location_id:loc1.id,schedule_id:schedule.id)
       end
     render json: { schedule: schedule}, adapter: :json

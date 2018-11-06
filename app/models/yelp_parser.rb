@@ -17,7 +17,7 @@ class YelpParser
   DEFAULT_BUSINESS_ID = "yelp-san-francisco"
   DEFAULT_TERM = "dinner"
   DEFAULT_LOCATION = "San Francisco, CA"
-  SEARCH_LIMIT = 5
+  SEARCH_LIMIT = 6
 
   def initialize
     @data = []

@@ -23,16 +23,14 @@ class SchedulesContainer extends Component {
     this.setState({ savedLongLat:location })
   }
   render() {
-    console.log(this.state.savedLongLat)
     return (
-      <div>
-        <p>Hello</p>
-        <MyMapComponent
-          allLongLat = {this.state.savedLongLat}
-         />
-        <SchedulesFormContainer
-          handleLongLat = {this.handleLongLat}
-         />
+      <div className="row allForm columns">
+          <MyMapComponent
+            allLongLat = {this.state.savedLongLat}
+            />
+          <SchedulesFormContainer
+            handleLongLat = {this.handleLongLat}
+           />
       </div>
     )
   }

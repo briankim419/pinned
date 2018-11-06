@@ -3,7 +3,6 @@ class CreateLocations < ActiveRecord::Migration[5.2]
     create_table :locations do |t|
       t.string :name, null: false
       t.string :description
-      t.integer :rating
       t.string :url
       t.string :phone_number
       t.string :state, null: false
@@ -11,6 +10,11 @@ class CreateLocations < ActiveRecord::Migration[5.2]
       t.integer :zipcode, null: false
       t.string :address, null: false
       t.integer :price
+      t.decimal :rating
+      t.integer :review_count
+      t.decimal :latitude
+      t.decimal :longitude
+      t.string :image
 
       t.timestamps
     end

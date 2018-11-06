@@ -3,7 +3,6 @@ import { Route, Redirect } from 'react-router'
 import { push } from 'react-router'
 import { browserHistory } from 'react-router'
 import YelpTile from '../components/YelpTile'
-import SimpleMap from '../containers/SimpleMap'
 
 class SchedulesFormContainer extends Component {
   constructor(props) {
@@ -79,7 +78,6 @@ class SchedulesFormContainer extends Component {
 
   searchYelp(event) {
     event.preventDefault();
-
     fetch(`/api/v1/yelp?term=${this.state.a}&location=${this.state.location}`)
       .then(response => {
         if (response.ok) {
@@ -163,7 +161,7 @@ class SchedulesFormContainer extends Component {
     }
 
     return (
-      <div>
+      <div className="small-12 small-centered medium-6 columns form">
         <form onSubmit={this.handleSubmit}>
           <label>Title</label>
           <input
@@ -195,9 +193,8 @@ class SchedulesFormContainer extends Component {
             onChange = {this.handleChange}
             placeholder = 'What activity would you like to do?'
           />
-        <div>
-              <label>Yelp Radio</label>
-              <form>{yelp_data[0]}</form>
+            <div>
+              <form className="row columns">{yelp_data[0]}</form>
             </div>
             <label>B - Activity</label>
             <input
@@ -208,8 +205,7 @@ class SchedulesFormContainer extends Component {
               placeholder = 'What activity would you like to do?'
             />
           <div>
-            <label>Yelp Radio</label>
-            <form>{yelp_data[1]}</form>
+            <form className="row">{yelp_data[1]}</form>
           </div>
           <label>C - Activity</label>
           <input
@@ -220,26 +216,12 @@ class SchedulesFormContainer extends Component {
             placeholder = 'What activity would you like to do?'
           />
         <div>
-          <label>Yelp Radio</label>
-            <form>{yelp_data[2]}</form>
+          <form>{yelp_data[2]}</form>
         </div>
         </div>
-          <label>Search</label>
-          <input type='text' name='searchString' value={this.state.searchString} onChange={this.handleChange} />
-          <button onClick = {this.searchYelp}>Yelp</button>
+          <button className= "button" onClick = {this.searchYelp}>Pinned</button>
           <input className="button" type="submit" value="Submit" />
-          </form>
-
-        <div className="yelp-tile">
-          <h3>Ogawa Coffee</h3>
-          <p>Address: 10 Milk St | Rating: 4.5</p>
-          <img src="https://s3-media4.fl.yelpcdn.com/bphoto/Zbk3dY_gLAJ0pelu9ehojQ/o.jpg"/>
-        </div>
-        <div className="yelp-tile">
-          <h3>Ogawa Coffee</h3>
-          <p>Address: 10 Milk St | Rating: 4.5</p>
-          <img src="https://s3-media4.fl.yelpcdn.com/bphoto/Zbk3dY_gLAJ0pelu9ehojQ/o.jpg"/>
-        </div>
+        </form>
     </div>
     )
   }
