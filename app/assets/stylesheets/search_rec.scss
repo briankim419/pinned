@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.yelp-tile{
+  border: 5px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+  // width: 100%;
+  height: 500px;
+  padding: 5px;
+  white-space: nowrap;
+  overflow:scroll;
+  font-family:  'Montserrat', sans-serif;
+}
+
+img{
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.form{
+  padding: 0;
+  // width: 66.667%;
+  // left: 16.666%;
+  float: none !important;
+  font-family: 'Montserrat', sans-serif;
+}
+label{
+  font-size: 24px;
+}
+
+.map {
+  // height: 500px;
+  // width: 66.667%;
+  // left: 16.666%;
+  padding: 50px;
+  width: 100%;
+}
+
+.map-container {
+  margin: 0px;
+}
+
+.allForm{
+  width: 100vw;
+  margin:0;
+  max-width: 100vw;
+  padding: 0;
+}
+
+.button {
+  background: #E41B3B;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.button:hover{
+  background: transparent;
+  border: 2px solid #E41B3B;
+  color: #E41B3B;
+}
+
+.button:focus{
+  background: transparent;
+  border: 2px solid #E41B3B;
+  color: #E41B3B;
+}
+
+.row{
+  max-width: 100vw;
+}

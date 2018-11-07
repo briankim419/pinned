@@ -1,0 +1,20 @@
+<div class="grid-x">
+  <div class="cell small-10 small-offset-1">
+    <div class="callout tile">
+      <h1 class="text-center">Search Results</h1>
+      <br />
+      <% if @schedules.empty? %>
+        <p>No results found.</p>
+      <% else %>
+      <p><%= "#{@schedules.count} result(s) found." %></p>
+      <ul class="unstyled">
+        <% @schedules.each do |schedule| %>
+          <li>
+            <a href="/schedules/<%=schedule.id%>"> <%=schedule.title%> </a>
+          </li>
+        <% end %>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
