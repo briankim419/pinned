@@ -48,7 +48,6 @@ class YelpParser
         rating: biz["rating"],
         image: biz["image_url"],
         url: biz["url"],
-        rating: biz["rating"],
         price: biz["price"],
         phone: biz["phone"],
         yelp_id: biz["id"],

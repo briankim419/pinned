@@ -60,8 +60,6 @@
   <%= javascript_pack_tag 'application' %>
 
   <%= yield :extra_footer %>
-  <script
-  src="https://maps.googleapis.com/maps/api/js?key="ENV["GOOGLE_KEY"]>
-  </script>
+  <script src=<%="https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_KEY"]}"%>></script>
 </body>
 </html>
