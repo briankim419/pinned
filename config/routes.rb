@@ -12,6 +12,15 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      resources :schedules, only: [:index, :show, :new, :create] do
+        resources :reviews, only: [:index, :show, :new, :create]
+      end
+    end
+  end
+
+
+  namespace :api do
+    namespace :v1 do
       resources :timeslots, only: [:index, :show, :new, :create] do
         resources :locations, only: [:index, :show, :new, :create]
       end

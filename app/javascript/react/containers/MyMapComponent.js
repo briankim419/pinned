@@ -26,8 +26,6 @@ render() {
     }
   }
 
-  // style={{ width: `100%` }}
-  // style={{height: `1000px`, width: `1000px` }}
   const DirectionsComponent = compose(
     withProps({
       loadingElement: <div style={{ height: `100%` }} />,

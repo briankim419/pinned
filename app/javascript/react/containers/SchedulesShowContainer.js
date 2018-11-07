@@ -1,4 +1,3 @@
- /* global google */
 import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router'
 import { push } from 'react-router'
@@ -6,6 +5,7 @@ import { browserHistory } from 'react-router'
 import LocationTile from '../components/LocationTile'
 import MyMapComponent from '../containers/MyMapComponent'
 import MapHolder from '../components/MapHolder'
+import ReviewsIndexContainer from '../containers/ReviewsIndexContainer'
 
 class SchedulesShow extends Component {
   constructor(props) {
@@ -83,6 +83,10 @@ class SchedulesShow extends Component {
         {map}
         <MapHolder
           allLongLat={this.state.savedLongLat}
+        />
+        <ReviewsIndexContainer
+          key={this.props.params.id}
+          id={this.props.params.id}
         />
       </div>
 

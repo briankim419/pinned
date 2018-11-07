@@ -1,3 +1,3 @@
 class ScheduleSerializer < ActiveModel::Serializer
-  attributes :id, :title, :body, :locations
+  attributes :id, :title, :body, :locations, :reviews
 end
