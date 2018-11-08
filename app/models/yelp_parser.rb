@@ -1,7 +1,6 @@
 require "json"
 require "http"
 require "optparse"
-require "pry"
 
 class YelpParser
   attr_reader :data
