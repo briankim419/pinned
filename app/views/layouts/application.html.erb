@@ -20,32 +20,34 @@
 
 
     <section class="top-bar-section">
-      <ul class="right small-6 medium-6  columns">
+      <ul class="right small-12 medium-12 columns">
         <li>
         <%= form_tag(search_schedules_path, method: :get) do %>
-          <li class="">
+          <li class="top-bar">
               <%= text_field_tag 'query', params[:query], placeholder: 'Find a Schedule' %>
             </li>
             <li>
-              <%= submit_tag 'Search' %>
+              <%= submit_tag 'Search', :class => 'search' %>
           </li>
         <%- end -%>
       </li>
         <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+          <li class="top-bar"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+          <li class="top-bar"><%= link_to "Build Schedule", new_schedule_path %></li>
         <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
+
+          <li class="top-bar"><%= link_to 'Sign Up', new_user_registration_path %></li>
+          <li class="top-bar"><%= link_to 'Sign In', new_user_session_path %></li>
         <%- end -%>
       </ul>
     </section>
   </nav>
-
+<!-- 
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
     </div>
-  <%- end -%>
+  <%- end -%> -->
 
   <%= yield %>
 

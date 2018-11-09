@@ -9,9 +9,9 @@
       <p><%= "#{@schedules.count} result(s) found." %></p>
       <ul class="unstyled">
         <% @schedules.each do |schedule| %>
-          <li>
+          <p>
             <a href="/schedules/<%=schedule.id%>"> <%=schedule.title%> </a>
-          </li>
+          </p>
         <% end %>
       </ul>
       <% end %>

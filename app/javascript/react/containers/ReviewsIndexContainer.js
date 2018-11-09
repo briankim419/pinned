@@ -11,23 +11,18 @@ class ReviewsIndexContainer extends Component {
     this.addNewReview = this.addNewReview.bind(this);
   }
   addNewReview(reviewPayload) {
-    debugger
    if(this.state.reviews.length == undefined){
-     debugger;
      let firstReview = this.state.reviews
-     debugger;
      firstReview = [reviewPayload]
-     debugger;
      this.setState({reviews: firstReview})
    }else {
-     debugger
    let newReviews = this.state.reviews.concat(reviewPayload)
    this.setState({ reviews: newReviews })
     }
   }
   componentDidMount() {
     fetch(`/api/v1/schedules/${this.props.id}/reviews`)
-    .then(response => { debugger;
+    .then(response => {
       if (response.ok) {
         return response;
       } else {
@@ -52,7 +47,6 @@ class ReviewsIndexContainer extends Component {
       />
       </div>
     if (Array.isArray(allReviews) && allReviews.length != 0) {
-      debugger;
       reviewList = allReviews.map(review =>
       <div className="reviewstile small-12 small-centered medium-4 columns row" >
         <div className="reviews" key={review.id}>

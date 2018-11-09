@@ -138,12 +138,13 @@ class ReviewsFormContainer extends Component {
            />
            <div className="reviewtile">
             <label className="reviewfont"></label>
-         <input
+         <textarea
            name='body'
            type = 'textarea'
            value={this.state.body}
            style={{ height: 200, width: 650 }}
            onChange={this.handleChange}
+           className = 'reviewForm'
          />
          </div>
         <input className="button" type="submit" value="Submit" />

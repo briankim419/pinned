@@ -30,7 +30,7 @@ render() {
     withProps({
       loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `500px` }} />,
-    mapElement: <div className="columns small-centered small-12 medium-6 columns"  style={{ height: `100%` }} />,
+  mapElement: <div className="columns small-centered small-12 medium-8 columns"  style={{ height: `100%` }} />,
     }),
     // withScriptjs,
     withGoogleMap,

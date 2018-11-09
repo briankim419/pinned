@@ -18,6 +18,139 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-h1,h2,h3,h4{
+h1,h2,h3,h4,div{
   font-family: 'Montserrat';
+}
+
+.home{
+  background-color: red;
+  background:url(PinnedCover.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+}
+
+nav.top-bar{
+  background-color: #E41B3B;
+  color: #E41B3B;
+  font-weight: bold;
+  height: 70px;
+  font-size: 30px;
+}
+
+.top-bar-section ul li {
+  background-color: #E41B3B;
+  color: #E41B3B;
+  font-weight: bold;
+}
+.top-bar-section ul li > a{
+
+  font-family: Montserrat;
+  font-size: 25px;
+}
+.menu a {
+  background-color: #E41B3B;
+  color: #E41B3B;
+  font-weight: bold;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background: #E41B3B;
+}
+
+.top-bar-section{
+  background-color: #E41B3B;
+  color: #E41B3B;
+}
+
+.top-bar .name h1 a{
+  padding-top: 15px;
+  font-size: 50px;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+    background-color: #222222;
+    background: #222222;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  padding-top: 15px;
+  height: 70px;
+}
+
+.top-bar input, .top-bar select, .top-bar .button, .top-bar button {
+    font-size: 1.5rem;
+    height: 40px;
+    position: relative;
+    top: 0.53125rem;
+    width: 400px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-top: 7px;
+    font-family: Montserrat;
+}
+
+
+.text-center{
+  color: #E41B3B;
+  font-size: 60px;
+}
+
+.unstyled{
+  font-size: 50px;
+  text-align: center;
+}
+
+.unstyled > p{
+  font-size: 35px;
+  text-align: center;
+}
+.callout{
+  text-align: center;
+}
+
+.column.small-centered, .columns.small-centered {
+  margin-top: 30px;
+}
+
+form > li > input{
+  width: 150px;
+}
+
+input.search{
+  width:150px;
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: Montserrat;
+  color: gray;
+}
+
+.log_in{
+  background-color: #E41B3B;
+  font-family: Montserrat;
+  border: none;
+  font-family: Montserrat;
+  color: white;
+  font-size: 25px;
+}
+
+
+.log_in:hover{
+  background-color: white;
+  font-family: Montserrat;
+  border: none;
+  font-family: Montserrat;
+  color: #E41B3B;
+  font-size: 25px;
+}
+
+.small-3 {
+    width: 30%;
+}
+
+input.reviewForm{
+  font-size: 25px;
+  font-family: Montserrat;
 }

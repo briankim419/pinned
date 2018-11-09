@@ -71,7 +71,7 @@ class SchedulesFormContainer extends Component {
   })
   .then(response => response.json())
   .then(body => {
-    browserHistory.push(`/`)
+    browserHistory.push(`/schedules/${body.schedule.id}`)
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -161,7 +161,7 @@ class SchedulesFormContainer extends Component {
     }
 
     return (
-      <div className="small-12 small-centered medium-6 columns form">
+      <div className="small-12 small-centered medium-8 columns form">
         <form onSubmit={this.handleSubmit}>
           <label>Title</label>
           <input
@@ -191,7 +191,7 @@ class SchedulesFormContainer extends Component {
             type = 'text'
             value = {this.state.a}
             onChange = {this.handleChange}
-            placeholder = 'What activity would you like to do?'
+            placeholder = 'What would you like to do?'
           />
             <div>
               <form className="row columns">{yelp_data[0]}</form>
@@ -202,7 +202,7 @@ class SchedulesFormContainer extends Component {
               type = 'text'
               value = {this.state.b}
               onChange = {this.handleChange}
-              placeholder = 'What activity would you like to do?'
+              placeholder = 'What would you like to do?'
             />
           <div>
             <form className="row">{yelp_data[1]}</form>
@@ -213,7 +213,7 @@ class SchedulesFormContainer extends Component {
             type = 'text'
             value = {this.state.c}
             onChange = {this.handleChange}
-            placeholder = 'What activity would you like to do?'
+            placeholder = 'What would you like to do?'
           />
         <div>
           <form>{yelp_data[2]}</form>
