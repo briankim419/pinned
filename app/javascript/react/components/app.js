@@ -5,12 +5,14 @@ import SchedulesFormContainer from '../containers/SchedulesFormContainer';
 import SimpleMap from '../containers/SimpleMap';
 import SchedulesContainer from '../containers/SchedulesContainer';
 import SchedulesShowContainer from '../containers/SchedulesShowContainer';
+import HomeTile from '../components/HomeTile';
 
 
 export const App = (props) => {
   return (
     <Router history={browserHistory}>
-      <Route path='/' component={SchedulesContainer} />
+      <Route path='/' component={HomeTile} />
+      <Route path='/schedules/new' component={SchedulesContainer} />
       <Route path='/schedules/:id' component={SchedulesShowContainer} />
     </Router>
   );
