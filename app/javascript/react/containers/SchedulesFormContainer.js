@@ -9,21 +9,12 @@ class SchedulesFormContainer extends Component {
     super(props);
     this.state = {
       data: [],
-      data1: [],
-      x: [],
       title: "",
       description: "",
       location: "",
       a: "",
       b: "",
       c: "",
-      searchString: '',
-      place_id: '',
-      placeIdOne: '',
-      placeIdTwo: '',
-      placeIdThree: '',
-      yelpPlacesId: [],
-      base_data: [],
       savedID: {}
     };
     this.searchYelp = this.searchYelp.bind(this);
@@ -129,8 +120,7 @@ class SchedulesFormContainer extends Component {
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
-
-
+  
   render() {
     let a,b,c;
     let yelp_data = [];

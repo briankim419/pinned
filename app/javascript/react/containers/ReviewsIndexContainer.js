@@ -41,7 +41,8 @@ class ReviewsIndexContainer extends Component {
   render(){
     let allReviews = this.state.reviews
     let reviewList
-    let reviewForm = <div className = "small-12 small-centered medium-4 columns row"> <ReviewsFormContainer
+    let reviewForm = <div className = "small-12 small-centered medium-4 columns row">
+      <ReviewsFormContainer
         id={this.props.id}
         addNewReview={this.addNewReview}
       />

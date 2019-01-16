@@ -15,20 +15,16 @@ class ReviewsFormContainer extends Component {
       errors: {},
 
     }
-
     this.handleChange = this.handleChange.bind(this);
     this.handleClearForm = this.handleClearForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validateBodyInput = this.validateBodyInput.bind(this);
     this.validateRatingInput = this.validateRatingInput.bind(this);
     this.onStarClick = this.onStarClick.bind(this);
-
   }
-
   onStarClick(nextValue, prevValue, name) {
   this.setState({rating: nextValue});
     }
-
 
   validateBodyInput(input) {
       if (input.trim() === '') {
@@ -76,7 +72,6 @@ class ReviewsFormContainer extends Component {
     event.preventDefault();
     if((this.validateBodyInput(this.state.body)) && (this.validateRatingInput(this.state.rating)) ) {
 
-
       let body = new FormData()
       body.append("body", this.state.body)
       body.append("rating", this.state.rating)
@@ -87,8 +82,6 @@ class ReviewsFormContainer extends Component {
       let errorState = this.state.errors
       delete errorState.inputError
       this.setState({ errors: errorState})
-
-
 
       fetch(`/api/v1/schedules/${this.props.id}/reviews`, {
         credentials: 'same-origin',
